@@ -11,7 +11,9 @@ class Abbreviations:
     def get_file_name(self):
         self.name = input("Please enter name of text file: ")
         if ".txt" not in self.name:
-            self.name = self.name + ".txt"
+            self.name = "../data/"+self.name + ".txt"
+        else:
+            self.name = "../data/"+self.name
         print("File " + self.name + " is now loading...")
 
     def read_in_file(self):
